@@ -36,37 +36,37 @@ window.onload=function(){
         // console.log(e.thumbnail)
 
         if(e.hasOwnProperty('thumbnail')){
-          var side = (Math.floor(Math.random()*5))
-          console.log(side)
-          if (side==1){
-            var randPosY = (Math.floor(Math.random()*3))
-            var randomPosX = (Math.floor(Math.random()*8)-4)
-            var randomPosYY =randPosY-1
-            var random =0.6
-            var position=0
-
-          }
-          else if (side==2){
-            var randPosY = (Math.floor(Math.random()*3))
-            var randomPosX = -3.4
-            var randomPosYY =randPosY-1
-            var random =(Math.floor(Math.random()*7))
-            var position=-270
-          }
-          else if (side==3){
-            var randPosY = (Math.floor(Math.random()*3))
-            var randomPosX = 3.4
-            var randomPosYY =randPosY-1
-            var random =(Math.floor(Math.random()*7))
-            var position=-90
-          }
-          else{
-            var randPosY = (Math.floor(Math.random()*2))
-            var randomPosX = (Math.floor(Math.random()*5)-3)
-            var randomPosYY =randPosY-1
-            var random =6.4
-            var position=-180
-          }
+          // var side = (Math.floor(Math.random()*5))
+          // console.log(side)
+          // if (side==1){
+          //   var randPosY = (Math.floor(Math.random()*3))
+          //   var randomPosX = (Math.floor(Math.random()*8)-4)
+          //   var randomPosYY =randPosY-1
+          //   var random =0.6
+          //   var position=0
+          //
+          // }
+          // else if (side==2){
+          //   var randPosY = (Math.floor(Math.random()*3))
+          //   var randomPosX = -3.4
+          //   var randomPosYY =randPosY-1
+          //   var random =(Math.floor(Math.random()*7))
+          //   var position=-270
+          // }
+          // else if (side==3){
+          //   var randPosY = (Math.floor(Math.random()*3))
+          //   var randomPosX = 3.4
+          //   var randomPosYY =randPosY-1
+          //   var random =(Math.floor(Math.random()*7))
+          //   var position=-90
+          // }
+          // else{
+          //   var randPosY = (Math.floor(Math.random()*2))
+          //   var randomPosX = (Math.floor(Math.random()*5)-3)
+          //   var randomPosYY =randPosY-1
+          //   var random =6.4
+          //   var position=-180
+          // }
           console.log(e.thumbnail.source)
           var page = e.pageid
           console.log(page)
@@ -89,15 +89,15 @@ window.onload=function(){
           elem.setAttribute("src", g);
           elem.setAttribute("height", ".5");
           elem.setAttribute("width", ".5");
-          elem.setAttribute("rotation", {x:0, y:position, z:0})
-          elem.setAttribute("position", {x:randomPosX, y:randPosY, z:random})
+          elem.setAttribute("rotation", {x:0, y:0, z:0})
+          elem.setAttribute("position", {x:9 y:4 z:-2})
           document.getElementById("steve").appendChild(elem);
 
           frame.setAttribute("src", "img/frame.png")
           frame.setAttribute("height", "1")
           frame.setAttribute("width", "1")
-          frame.setAttribute("rotation", {x:0, y:position, z:0})
-          frame.setAttribute("position", {x:randomPosX, y:randPosY, z:random})
+          frame.setAttribute("rotation", {x:9 y:4 z:-2})
+          frame.setAttribute("position", {x:9 y:4 z:-2})
           document.getElementById("steve").appendChild(frame)
 
           var link = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+ page +"&format=json&callback=?";
@@ -156,11 +156,11 @@ window.onload=function(){
                       let ds = (res[2][0])
                       let text = document.createElement("a-text")
                       text.setAttribute("value", ti + ": "+ ds)
-                      text.setAttribute("rotation", {x:0, y:position, z:0})
-                      text.setAttribute("position", {x:randomPosX, y:randomPosYY, z:random})
+                      text.setAttribute("rotation", {x:9 y:4 z:-2})
+                      text.setAttribute("position", x:9 y:4 z:-2})
                       text.setAttribute("scale",".1 1 1")
                       text.setAttribute("width", "10")
-                      text.setAttribute("height", "20")
+                      text.setAttribute("height", "2")
                       text.setAttribute("wrapCount","10")
                       text.setAttribute("geometry", "primitive:plane")
                       text.setAttribute("color", "black")

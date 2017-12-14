@@ -11,8 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "aframe": "^0.7.1",
+    "aframe-auto-detect-controllers-component": "^0.1.4",
     "aframe-click-drag-component": "^3.0.1",
     "aframe-extras": "^3.13.1",
+    "aframe-gearvr-controls-component": "^0.1.7",
     "body-parser": "^1.14.2",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
