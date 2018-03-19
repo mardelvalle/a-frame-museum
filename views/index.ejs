@@ -10,250 +10,339 @@
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script>
-  <!-- <script src="../aframe-extras.js"></script> -->
+
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
-   <!-- <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script> -->
-  <!-- aframe extras -->
-  <!-- <script src="https://unpkg.com/aframe-click-drag-component"></script>
-  <script src="https://unpkg.com/aframe-click-drag-component"></script> -->
-<!-- <script>  registerAframeClickDragComponent(window.AFRAME); </script> -->
+
+
   <meta charset="UTF-8">
 
 </head>
 <body>
   <a-scene>
     <a-entity gearvr-controls></a-entity>
-    <a-assets>
-      <img id="boxTexture" src="img/look.jpg"/>
-      <img id="paper" src="img/paper.jpg"/>
-      <!-- david -->
-  <!--<a-asset-item id="david-obj" src="models/david.obj"></a-asset-item>-->
-  <a-asset-item id="david-ctm" src="img\david.ctm"></a-asset-item>
-  <!--<img id="david-texture" src="textures/david.jpg">-->
+     <a-assets>
+       <img id="boxTexture" src="img/look.jpg"/>
+       <img id="paper" src="img/paper.jpg"/>
+       <!-- david -->
 
-      <!-- <img id="texture" src="img/texture.jpg"> -->
-      <!-- <img id="sky" src="img/sky.jpg"> -->
-      <!-- <img id="so" src="https://content3.cdnprado.net/imagenes/Documentos/imgsem/85/85db/85db1346-5da6-43ca-807b-028010e8369a/c4915c7b-94ee-2bb5-6ebf-dc1840c77c0f.jpg"> -->
-<!-- david declared -->
-         <a-asset-item id="object" src="img//david.obj"></a-asset-item>
-         <a-asset-item id="material" src="img/david.mtl"></a-asset-item>
-         <a-asset-item id="c" src="img/david.ctm"></a-asset-item>
-<!-- sword declared -->
-         <a-asset-item id="sword" src="img//models/Sword/Sword.obj"></a-asset-item>
-         <a-asset-item id="part" src="img/models/Sword/Sword.mtl"></a-asset-item>
-         <a-asset-item id="cr" src="img/models/Sword/Sword.c4d"></a-asset-item>
-         <a-asset-item id="fb" src="img/models/Sword/Sword.fbx"></a-asset-item>
-<!-- table declared -->
-         <a-asset-item id="chair" src="img/models/CenterTable/CenterTable.obj"></a-asset-item>
-         <a-asset-item id="surface" src="img/models/CenterTable/CenterTable.mtl"></a-asset-item>
-         <!-- <a-asset-item id="sheet" src="img/models/CenterTable/CenterTable.max"></a-asset-item> -->
-         <a-asset-item id="balcony" src="img/models/3dhandrail007.dwg"></a-asset-item>
-<!-- sphere created -->
-         <a-asset-item id="earth" src="img/models/earth.obj"></a-asset-item>
-         <a-asset-item id="emtl" src="img/models/earth.mtl"></a-asset-item>
-         <a-asset-item id="edae" src="img/models/earth.dae"></a-asset-item>
-         <a-asset-item id="edxf" src="img/models/earth.dxf"></a-asset-item>
-         <a-asset-item id="img" src="img/models/earth.fbx"></a-asset-item>
-
-         <!-- <a-asset-item id="eagle" src="img\EAGLE.obj"></a-asset-item>
-         <a-asset-item id="eamtl" src="img\EAGLE.mtl"></a-asset-item> -->
-  <!-- podium declared -->
-         <a-asset-item id="podium" src="img/podiums.obj"></a-asset-item>
-         <a-asset-item id="pmtl" src="img/podiums.mtl"></a-asset-item>
-<!-- head declared -->
-         <a-asset-item id="female" src="img/female_head.obj"></a-asset-item>
-         <a-asset-item id="fmtl" src="img/female_head.mtl"></a-asset-item>
-<!-- bust declared -->
-         <a-asse` t-item id="greek" src="img/greek_bust.obj"></a-asset-item>
-         <a-asset-item id="bust" src="img/greek_bust.mtl"></a-asset-item>
-<!-- object declared -->
-         <a-asset-item id="man" src="img/old_man.obj"></a-asset-item>
-         <a-asset-item id="old" src="img/old_man.mtl"></a-asset-item>
-<!--
-      <a-mixin id="checkpoint"></a-mixin>
-       <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin> -->
-      </a-assets>
-      <!-- Using the asset management system. -->
-      <a-entity position ="0 200 150">
-        <!-- <a-obj-model src="#balcony"></a-obj-model> -->
-      <a-obj-model src="#object"  mtl="#material" ctm="c" fbx="#img" position="3 1 .6" rotation= "40 40 0" ></a-obj-model>
-      </a-entity>
-      <!-- <a-obj-model src="#sword" mtl="#part" c4d="cr" fbx="fb" ></a-obj-model> -->
-      <a-obj-model src="#chair" mtl="#surface" position="3 -6 17" rotation ="130 0 90" scale="1 1 1"></a-obj-model>
-      <a-obj-model src="#earth" mtl="#emtl" dae="#edae" dxf="#edxf" scale=".3 .3 .3" position="-7 1 7"></a-obj-model>
-      <a-obj-model src="#female" mtl="#fmtl" position="8 -17 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
-      <a-obj-model src="#greek" mtl="#bust" position="7 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
-      <a-obj-model src="#man" mtl="#old" position="6 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
-      <a-obj-model src="#ster" mtl="#road" position="5 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
-      <a-obj-model src="#lego" mtl="#plane" position="6.5 6 5" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
-
-<!-- europe -->
-      <a-obj-model src="img\models\europe\phone.obj" position="1.2 0 1.2" rotation="0 0 0" color="pink" scale=".3 .3 .3"></a-obj-model>
-      <a-obj-model src="img\models\europe\roundspeaker1.obj" position="4.5 -1 -2" rotation="-90 0 90" scale=".3 .3 .3"></a-obj-model>
-      <a-obj-model src="img\models\europe\glasses\Glasses.obj" position="3.5 -0.6 10" rotation="0"></a-obj-model>
-<!-- latin america -->
-<!-- <a-obj-model src="img\models\europe\roundspeaker1.obj" position="3 -4 5" rotation="130 0 0"></a-obj-model> -->
-<!-- <a-obj-model src="img\models\europe\roundspeaker1.obj" position="5 0 0" rotation="130 0 0"></a-obj-model>
-<a-obj-model src="img\models\europe\roundspeaker1.obj" position="5 0 0" rotation="130 0 0"></a-obj-model> -->
-<a-obj-model src="img\models\southamerica\pen\pen_parker.obj" mtl="img\models\southamerica\pen\pen_parker.mtl" position="3 3 2" scale=".1 .1 .1" rotation="0 0 -270"></a-obj-model>
-<a-obj-model src="img\models\southamerica\HumanHeart2\Heart.obj" mtl="img\models\southamerica\HumanHeart2\Heart.mtl" position="1.4 -.2 -1" scale=".01 .01 .01" rotation="0 0 -270"></a-obj-model>
-<a-obj-model src="img\models\southamerica\Duracell\Duracell_AA.obj" position="2 2 2" scale=".1 .1 .1" rotation="0 0 -270"></a-obj-model>
-
-<!-- - david -->
-<!--<a-entity obj-model="obj: #david-obj;" material="src: #david-texture"></a-entity>-->
-<!-- <a-entity ctm="src: #david-ctm; name:david;" position="1 0.5 1" width="7" height="5" depth="1" ></a-entity>
-<a-entity ctm="src: #david-ctm; name:david;" position="1 0.5 1" width="7" height="5" depth="1" ></a-entity> -->
-    <a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
-    <!-- this event doesn't seem to be working -->
-  <!-- <a-event name="mouseenter" scale="4 1 6"></a-event> -->
-  <!-- <a-box static-body width="3" position="-3 0.5 -2"height="1" depth="2" src="img/texture.jpg"></a-box> -->
-  <a-box static-body src="img/texture.jpg"  id="steve" width="7" position="0 0.5 0"height="5" depth="1" ></a-box>
-  <!-- <a-image src="https://www.ibiblio.org/wm/paint/auth/vinci/ermine.jpg" height="5" width="5"> -->
-  <a-box  static-body width="7" position="0 0.5 7"height="5" depth="1" src="img/texture.jpg"></a-box>
-
-  <a-box static-body src="#paper"  width="1" position="-4 0.5 5"height="5" depth="30" color="red"></a-box>
-  <a-box static-body src="#paper"  width="1" position="10 0.5 -8"height="5" depth="15"></a-box>
-    <a-box static-body color="tan" width="1" position="10 6 -8"height="5" depth="30"></a-box>
-    <a-box static-body color="#a14a17" width="1" position="10 3 -8"height="1" depth="30"></a-box>
-  <a-box static-body ID="balconywall" src="#paper" width="20" position="0 0.5 20"height="10" depth="1"></a-box>
-  <a-box static-body src="#paper"  width="15" position="2 0.5 -10"height="15" depth="1"></a-box>
-  <a-box static-body src="#paper"  width="1" position="10 0.5 14"height="5" depth="14"></a-box>
-
-    <a-box static-body color="tan" width="1" position="10 6 14"height="5" depth="15"></a-box>
-    <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box>
-
-    <a-box static-body src="#paper"  width="10" position="-1.5 5 5"height="5" depth="30"></a-box>
-    <a-plane position="0 7 5" rotation="-270 0 0" width="30.5" depth:"3" height="40" color="silver"></a-plane>
+   <a-asset-item id="david-ctm" src="img\david.ctm"></a-asset-item>
 
 
-    <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box>
-    <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box> -->
+ <!-- david declared -->
+          <a-asset-item id="object" src="img//david.obj"></a-asset-item>
+          <a-asset-item id="material" src="img/david.mtl"></a-asset-item>
+          <a-asset-item id="c" src="img/david.ctm"></a-asset-item>
+ <!-- sword declared -->
+          <a-asset-item id="sword" src="img//models/Sword/Sword.obj"></a-asset-item>
+          <a-asset-item id="part" src="img/models/Sword/Sword.mtl"></a-asset-item>
+          <a-asset-item id="cr" src="img/models/Sword/Sword.c4d"></a-asset-item>
+          <a-asset-item id="fb" src="img/models/Sword/Sword.fbx"></a-asset-item>
+ <!-- table declared -->
+          <a-asset-item id="chair" src="img/models/CenterTable/CenterTable.obj"></a-asset-item>
+          <a-asset-item id="surface" src="img/models/CenterTable/CenterTable.mtl"></a-asset-item>
 
-  <a-box static-body src="img/texture.jpg" id="something" width="11" position="16 0.5 0"height="5" depth="1" ></a-box>
-  <!-- <a-image src="https://www.ibiblio.org/wm/paint/auth/vinci/ermine.jpg" height="5" width="5"> -->
-  <a-box  static-body width="11" position="16 0.5 7"height="5" depth="1" src="img/texture.jpg"></a-box>
-  <a-box  static-body src="img/texture.jpg" width="1" position="20 0.5 3.5"height="5" depth="7"></a-box>
-    <!-- <a-box src="img/do.jpg" depth="4" height="3" width="3" position="20.5 -1 3.6" ></a-box> -->
-    <a-box color="red" depth="2.5" height="5" width="5" position="17 -4 0.5" ></a-box>
-    <a-box color="red" depth="2" height="5" width="5" position="17 -4 6" ></a-box>
-    <a-box static-body src="img/carpet.jpg" width="1.5" position="19 -3.5 3.5"height="1" depth="3"></a-box>
-    <a-box static-body src="img/carpet.jpg" width="1.5" position="18 -3 3.5"height="1" depth="3"></a-box>
-    <a-box static-body  width="1.5" position="17 -2.5 3.5"height="1" depth="3" src="img/carpet.jpg"></a-box>
-    <a-box static-body src="img/carpet.jpg" width="1.5" position="16 -2 3.5"height="1" depth="3"></a-box>
-  <!-- <a-image id="charlie" width="1" position "3 1 .6" height="1"<a-image> -->
-  <!-- <a-image class="forward" src="img\look.jpg" width="1" position="3 1 .6"height="1"></a-image>
-  <a-image class="forward" src="img\look.jpg" width="1" position="-3 1 .6"height="1"></a-image>
-  <a-image class="forward" src="img\look.jpg" width="1" position="-3 2 .6"height="1"></a-image>
-  <a-image class="forward" src="img\look.jpg" width="1" position="3 2 .6"height="1"></a-image>
-  <a-text value="Hello A-Frame!" position="1 1 2" depth="5" text.width="8" text.color="black" geometry="primitive:plane"></a-text>
-  <a-image class="left" rotation="0 -270 0" src="img\look.jpg" width="1" position="-3.4 2 1"height="1"></a-image>
-  <a-image class="left" rotation="0 -270 0" src="img\look.jpg" width="1" position="-3.4 1 1"height="1"></a-image>
-  <a-image class="left" rotation="0 -270 0" src="img\look.jpg" width="1" position="-3.4 1 6"height="1"></a-image>
-  <a-image class="left" rotation="0 -270 0" src="img\look.jpg" width="1" position="-3.4 2 6"height="1"></a-image>
-
-  <a-image class="right" rotation="0 -90 0" src="img\look.jpg" width="1" position="3.4 2 1"height="1"></a-image>
-  <a-image class="right" rotation="0 -90 0" src="img\look.jpg" width="1" position="3.4 1 1"height="1"></a-image>
-  <a-image class="right" rotation="0 -90 0" src="img\look.jpg" width="1" position="3.4 1 6"height="1"></a-image>
-  <a-image class="right" rotation="0 -90 0" src="img\look.jpg" width="1" position="3.4 2 6"height="1"></a-image>
-
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 1 6.4"height="1"></a-image>
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 2 6.4"height="1"></a-image>
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 1 6.4"height="1"></a-image>
-<a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 2 6.4"height="1"></a-image> -->
-<!-- <a-entity position="1 0 "> -->
-<a-image checkpoint="offset: 0 1.6 0"src="img\statemap.png" width="4" height="4" position="-3.4 0.5 13"  rotation="0 -270 0"></a-image>
-<!-- </a-entity> -->
-<a-entity position="1 0 1">
-<a-image checkpoint="offset: 0 5 0" src="img\europe.png" width="4" height="4" rotation="0 -270 0" position="-4 0.5 3"></a-image>
-<a-image checkpoint="offset: 5 5 5" src="img\south-america-finalone.png" width="4" height="4" rotation="0 -270 0" position="-4 0.5 -5"></a-image>
-
-</a-entity>
+          <a-asset-item id="balcony" src="img/models/3dhandrail007.dwg"></a-asset-item>
+ <!-- sphere created -->
+          <a-asset-item id="earth" src="img/models/earth.obj"></a-asset-item>
+          <a-asset-item id="emtl" src="img/models/earth.mtl"></a-asset-item>
+          <a-asset-item id="edae" src="img/models/earth.dae"></a-asset-item>
+          <a-asset-item id="edxf" src="img/models/earth.dxf"></a-asset-item>
+          <a-asset-item id="img" src="img/models/earth.fbx"></a-asset-item>
 
 
 
-<a-obj-model src="#david-obj" mtl="#david-texture"></a-obj-model>
-
-  <a-plane position="0 -2 0" rotation="-90 0 0" width="50" depth:"3" height="50" src="https://thumbs.dreamstime.com/z/vector-carpet-9469085.jpg"></a-plane>
-  <a-plane position="0 10 5" rotation="-270 0 0" width="15" height="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chandelier%2C_Val%C3%A8ncia_town_hall.JPG/1200px-Chandelier%2C_Val%C3%A8ncia_town_hall.JPG"></a-plane>
-  <a-plane position="15 3 4" rotation="-270 0 0" width="10" height="10" src="img/nightsky.jpg"></a-plane>
-  <!-- <a-image id="right" src="img\look.jpg" rotation="0 -90 0" width="1" position="-2 1 .6"height="1"<a-image> -->
-  <!-- <a-image id="backward" src="img\look.jpg" rotation="0 -180 0" width="1" position="2.8 -4 .6"height="1"<a-image> -->
-  <!-- <a-image id="left" src="img\look.jpg" rotation="0 -270 0" width="1" position="-2 -4 .6"height="1"<a-image> -->
-
-  <a-image class="forward" src="img\paintings\mal.jpg" width="1" position="1 1 0"height="1"></a-image>
-  <!-- chilean cundo bermdez -->
-  <a-image class="forward" src="img\paintings\hand.jpg" width="2" position="-2 1 -9"height="2"></a-image>
-  <!-- colombian fernando botero -->
-  <a-image class="forward" src="img\paintings\blue.jpg" width="3" position="3 1 -9"height="3"></a-image>
-<!-- brazil di cavalcanti -->
-<a-image class="left" rotation="0 0 0" src="img\paintings\monalisa.jpg" width="2" position="-2 .5 1"height="3"></a-image>
-  <a-image class="left" rotation="0 0 0" src="img\paintings\chardin.jpg" width="1" position="2.4 .5 1"height="1"></a-image>
-  <a-image class="left" rotation="0 -180 0" src="img\paintings\getimage.jpg" width="1" position="-3.4 1 6"height="1"></a-image>
-  <a-image class="left" rotation="0 -270 0" src="img\flowers.jpg" width="1" position="-3.4 2 6"height="1"></a-image>
-
-  <a-image class="right" rotation="0 0 0" src="img\paintings\na.jpg" width="3" position="3.4 1 19"height="3"></a-image>
-  <a-image class="right" rotation="0 180 0" src="img\paintings\beac.jpg" width="3" position="0 1 8"height="3"></a-image>
-  <a-image class="right" rotation="0 0 0" src="img\paintings\amy.jpg" width="1" position="0 1 19"height="1"></a-image>
-  <a-image class="right" rotation="0 180 0" src="img\paintings\mother.jpg" width="2" position="3 1 8"height="2"></a-image>
-
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 1 6.4"height="1"></a-image>
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 2 6.4"height="1"></a-image>
-  <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 1 6.4"height="1"></a-image>
-<a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 2 6.4"height="1"></a-image>
+   <!-- podium declared -->
+          <a-asset-item id="podium" src="img/podiums.obj"></a-asset-item>
+          <a-asset-item id="pmtl" src="img/podiums.mtl"></a-asset-item>
+ <!-- head declared -->
+          <a-asset-item id="female" src="img/female_head.obj"></a-asset-item>
+          <a-asset-item id="fmtl" src="img/female_head.mtl"></a-asset-item>
+ <!-- bust declared -->
+          <a-asse` t-item id="greek" src="img/greek_bust.obj"></a-asset-item>
+          <a-asset-item id="bust" src="img/greek_bust.mtl"></a-asset-item>
+ <!-- object declared -->
+          <a-asset-item id="man" src="img/old_man.obj"></a-asset-item>
+          <a-asset-item id="old" src="img/old_man.mtl"></a-asset-item>
 
 
-<a-text position="4 3 14" value="Open States Symbols" rotation="0 90 0"></a-text>
-<a-text position="4 3 -1" value="Open South America Timeline" rotation="0 90 0"></a-text>
-<a-text position="4 3 5.5" value="Open Europe Inventions" rotation="0 90 0"></a-text>
+       </a-assets>
+       <!-- Using the asset management system. -->
+       <a-entity position ="0 200 150">
+         <!-- <a-obj-model src="#balcony"></a-obj-model> -->
+       <a-obj-model src="#object"  mtl="#material" ctm="c" fbx="#img" position="3 1 .6" rotation= "40 40 0" ></a-obj-model>
+       </a-entity>
+
+       <a-obj-model src="#chair" mtl="#surface" position="3 -6 17" rotation ="130 0 90" scale="1 1 1"></a-obj-model>
+       <a-obj-model src="#earth" mtl="#emtl" dae="#edae" dxf="#edxf" scale=".3 .3 .3" position="-7 1 7"></a-obj-model>
+       <a-obj-model src="#female" mtl="#fmtl" position="8 -17 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
+       <a-obj-model src="#greek" mtl="#bust" position="7 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
+       <a-obj-model src="#man" mtl="#old" position="6 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
+       <a-obj-model src="#ster" mtl="#road" position="5 -2 15" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
+       <a-obj-model src="#lego" mtl="#plane" position="6.5 6 5" rotation ="130 0 90" scale="3 3 3"></a-obj-model>
+
+ <!-- europe -->
+       <a-obj-model src="img\models\europe\phone.obj" position="1.2 0 1.2" rotation="0 0 0" color="pink" scale=".3 .3 .3"></a-obj-model>
+       <a-obj-model src="img\models\europe\roundspeaker1.obj" position="4.5 -1 -2" rotation="-90 0 90" scale=".3 .3 .3"></a-obj-model>
+       <a-obj-model src="img\models\europe\glasses\Glasses.obj" position="3.5 -0.6 10" rotation="0"></a-obj-model>
+
+ <a-obj-model src="img\models\southamerica\pen\pen_parker.obj" mtl="img\models\southamerica\pen\pen_parker.mtl" position="3 3 2" scale=".1 .1 .1" rotation="0 0 -270"></a-obj-model>
+ <a-obj-model src="img\models\southamerica\HumanHeart2\Heart.obj" mtl="img\models\southamerica\HumanHeart2\Heart.mtl" position="1.4 -.2 -1" scale=".01 .01 .01" rotation="0 0 -270"></a-obj-model>
+ <a-obj-model src="img\models\southamerica\Duracell\Duracell_AA.obj" position="2 2 2" scale=".1 .1 .1" rotation="0 0 -270"></a-obj-model>
+
+
+     <a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+
+   <a-box static-body src="img/texture.jpg"  id="steve" width="7" position="0 0 0"height="5" depth="1" ></a-box>
+
+   <a-box  static-body width="7" position="0 0 7"height="5" depth="1" src="img/texture.jpg"></a-box>
+
+   <a-box static-body src="#paper"  width="1" position="-4 0.5 5"height="5" depth="30" color="red"></a-box>
+   <a-box static-body src="#paper"  width="1" position="10 0.5 -8"height="5" depth="15"></a-box>
+     <a-box static-body color="tan" width="1" position="10 6 -8"height="5" depth="30"></a-box>
+     <a-box static-body color="#a14a17" width="1" position="10 3 -8"height="1" depth="30"></a-box>
+   <a-box static-body ID="balconywall" src="#paper" width="20" position="0 0.5 20"height="10" depth="1"></a-box>
+   <a-box static-body src="#paper"  width="15" position="2 0.5 -10"height="15" depth="1"></a-box>
+   <a-box static-body src="#paper"  width="1" position="10 0.5 14"height="5" depth="14"></a-box>
+
+     <a-box static-body color="tan" width="1" position="10 6 14"height="5" depth="15"></a-box>
+     <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box>
+
+     <a-box static-body src="#paper"  width="10" position="-1.5 5 5"height="5" depth="30"></a-box>
+     <a-plane position="0 7 5" rotation="-270 0 0" width="30.5" depth:"3" height="40" color="silver"></a-plane>
+
+
+     <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box>
+     <a-box static-body color="#a14a17" width="1" position="10 3 14"height="1" depth="15"></a-box> -->
+
+   <a-box static-body src="img/texture.jpg" id="something" width="11" position="16 0.5 0"height="5" depth="1" ></a-box>
+
+   <a-box  static-body width="11" position="16 0.5 7"height="5" depth="1" src="img/texture.jpg"></a-box>
+   <a-box  static-body src="img/texture.jpg" width="1" position="20 0.5 3.5"height="5" depth="7"></a-box>
+
+     <a-box color="red" depth="2.5" height="5" width="5" position="17 -4 0.5" ></a-box>
+     <a-box color="red" depth="2" height="5" width="5" position="17 -4 6" ></a-box>
+     <a-box static-body src="img/carpet.jpg" width="1.5" position="19 -3.5 3.5"height="1" depth="3"></a-box>
+     <a-box static-body src="img/carpet.jpg" width="1.5" position="18 -3 3.5"height="1" depth="3"></a-box>
+     <a-box static-body  width="1.5" position="17 -2.5 3.5"height="1" depth="3" src="img/carpet.jpg"></a-box>
+     <a-box static-body src="img/carpet.jpg" width="1.5" position="16 -2 3.5"height="1" depth="3"></a-box>
+
+
+ <a-image checkpoint="offset: 0 1.6 0"src="img\statemap.png" width="4" height="4" position="-3.4 0.5 13"  rotation="0 -270 0"></a-image>
+ <!-- </a-entity> -->
+ <a-entity position="1 0 1">
+ <a-image checkpoint="offset: 0 5 0" src="img\europe.png" width="4" height="4" rotation="0 -270 0" position="-4 0.5 3"></a-image>
+ <a-image checkpoint="offset: 5 5 5" src="img\south-america-finalone.png" width="4" height="4" rotation="0 -270 0" position="-4 0.5 -5"></a-image>
+
+ </a-entity>
 
 
 
+ <a-obj-model src="#david-obj" mtl="#david-texture"></a-obj-model>
 
-<!-- brazil di cavalcanti -->
-<!--https://4.bp.blogspot.com/-PNKVGoaAj7w/WBqgZ6NKaSI/AAAAAAAAcjk/0wVypUARwvM76DsLCHRm3jxjbezf-EpXACLcB/s1600/2015-06-17-1434503243-259110-IMAGE32-1.jpg -->
-<!--cassie stephens  -->
+   <a-plane position="0 -2 0" rotation="-90 0 0" width="50" depth:"3" height="50" src="https://thumbs.dreamstime.com/z/vector-carpet-9469085.jpg"></a-plane>
+   <a-plane position="0 10 5" rotation="-270 0 0" width="15" height="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chandelier%2C_Val%C3%A8ncia_town_hall.JPG/1200px-Chandelier%2C_Val%C3%A8ncia_town_hall.JPG"></a-plane>
+   <a-plane position="15 3 4" rotation="-270 0 0" width="10" height="10" src="img/nightsky.jpg"></a-plane>
 
 
-<a-cylinder width="5" height="2" radious="0" depth="1" position="9 4.2 -4" rotation="0 -270 0" src="img/balc6.jpg"></a-cylinder>
-  <a-cylinder width="5" height=".5" radious="0" depth="1" position="9 3.2 -4" rotation="0 -270 0" color="#a14a17"></a-cylinder>
-<a-cylinder width="5" height="2" radious="0" depth="1" position="9 4.2 10" rotation="0 -270 0" src="img/balc6.jpg"></a-cylinder>
-  <a-cylinder width="5" height=".5" radious="0" depth="1" position="9 3.2 10" rotation="0 -270 0" co;or="#a14a17"><a-cylinder>
-  <a-sky src="img\lake1_lf.JPG"></a-sky>
-  <a-camera
-    position="5 -4 0">
-  <!--   universal-controls=  "movementControls: checkpoint"
-          checkpoint-controls="mode: animate" -->
+   <a-image class="forward" src="img\paintings\mal.jpg" width="1" position="1 1 0"height="1"></a-image>
 
-    <a-cursor cursor=
-            position="0 0 -1"
-            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-            material="color: black; shader: flat">
-  </a-camera>
-    <!-- <a-camera look-controls-enabled="false"></a-camera> -->
+   <a-image class="forward" src="img\paintings\hand.jpg" width="2" position="-2 1 -9"height="2"></a-image>
 
-<a-entity light="type: ambient; color: #BBB"></a-entity>
-<a-light type="spot" color="orange" position="3 8 5"></a-light>
-<!-- <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
-                autoplay="true"
-                loop="true"
-                position="1 1 0"></a-sound> -->
+   <a-image class="forward" src="img\paintings\blue.jpg" width="3" position="3 1 -9"height="3"></a-image>
+
+ <a-image class="left" rotation="0 0 0" src="img\paintings\monalisa.jpg" width="2" position="-2 .5 1"height="3"></a-image>
+   <a-image class="left" rotation="0 0 0" src="img\paintings\chardin.jpg" width="1" position="2.4 .5 1"height="1"></a-image>
+   <a-image class="left" rotation="0 -180 0" src="img\paintings\getimage.jpg" width="1" position="-3.4 1 6"height="1"></a-image>
+   <a-image class="left" rotation="0 -270 0" src="img\flowers.jpg" width="1" position="-3.4 2 6"height="1"></a-image>
+
+   <a-image class="right" rotation="0 0 0" src="img\paintings\na.jpg" width="3" position="3.4 1 19"height="3"></a-image>
+   <a-image class="right" rotation="0 180 0" src="img\paintings\beac.jpg" width="3" position="0 1 8"height="3"></a-image>
+   <a-image class="right" rotation="0 0 0" src="img\paintings\amy.jpg" width="1" position="0 1 19"height="1"></a-image>
+   <a-image class="right" rotation="0 180 0" src="img\paintings\mother.jpg" width="2" position="3 1 8"height="2"></a-image>
+
+   <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 1 6.4"height="1"></a-image>
+   <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 2 6.4"height="1"></a-image>
+   <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="-2 1 6.4"height="1"></a-image>
+ <a-image class="left" rotation="0 -180 0" src="img\look.jpg" width="1" position="2 2 6.4"height="1"></a-image>
+
+
+ <a-text position="4 3 14" value="Open States Symbols" rotation="0 90 0"></a-text>
+ <a-text position="4 3 -1" value="Open South America Timeline" rotation="0 90 0"></a-text>
+ <a-text position="4 3 5.5" value="Open Europe Inventions" rotation="0 90 0"></a-text>
+
+
+
+ <a-cylinder width="5" height="2" radious="0" depth="1" position="9 4.2 -4" rotation="0 -270 0" src="img/balc6.jpg"></a-cylinder>
+   <a-cylinder width="5" height=".5" radious="0" depth="1" position="9 3.2 -4" rotation="0 -270 0" color="#a14a17"></a-cylinder>
+ <a-cylinder width="5" height="2" radious="0" depth="1" position="9 4.2 10" rotation="0 -270 0" src="img/balc6.jpg"></a-cylinder>
+   <a-cylinder width="5" height=".5" radious="0" depth="1" position="9 3.2 10" rotation="0 -270 0" co;or="#a14a17"><a-cylinder>
+   <a-sky src="img\lake1_lf.JPG"></a-sky>
+   <a-camera
+     position="5 -4 0">
+
+     <a-cursor cursor=
+             position="0 0 -1"
+             geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+             material="color: black; shader: flat">
+   </a-camera>
+
+ <a-entity light="type: ambient; color: #BBB"></a-entity>
+ <a-light type="spot" color="orange" position="3 8 5"></a-light>
 </a-scene>
-<!-- <script src="index.js">
-// $("#steve").on('mouseenter',function(){
-//   $("#steve").css("scale",)
-// })
-
-
-</script> -->
 <script>
-require('aframe');
-require('aframe-gearvr-controls-component');
-require('aframe-auto-detect-controllers-component')
-if (trackpaddown==true){
-  console.log(hi)
-}}
+window.onload=function(){
 
-</script>
-<!-- <script src="bundle.js"></script> -->
+  var h = -3;
+  // var enter="cookie";
+  var urlfull = "https://en.wikipedia.org/w/api.php?action=query&generator=random&prop=pageimages&grnlimit=100"+"&format=json&callback=?";
+  $.ajax({
+    type: "GET",
+    url: urlfull,
+    contentType: "application/json; charset=utf-8",
+    async: false,
+    dataType: "json",
+    success:function(res){
+      // console.log(res);
+      var t =res.query.pages;
+      console.log(t);
+      let arrObj = [];
+
+      Object.values(t).map((k,i)=>{
+        arrObj.push(k)
+      })
+
+      arrObj.forEach((e,i)=>{
+
+        if(e.hasOwnProperty('thumbnail')){
+
+          console.log(e.thumbnail.source);
+          var page = e.pageid;
+          console.log(page);
+          var g=e.thumbnail.source;
+          var title=e.title;
+          console.log(g);
+          // console.log(randomPosXX);
+
+          console.log(title);
+          console.log(e);
+          h = h+2;
+          m = 2;
+          n =2;
+          console.log(h);
+          console.log(g);
+          var elem = document.createElement("a-image");
+          var frame = document.createElement("a-image");
+          var possition=Math.floor((Math.random() * 20) + 10);
+          var framing=possition
+
+          elem.setAttribute("src", g);
+          elem.setAttribute("height", ".5");
+          elem.setAttribute("width", ".5");
+          elem.setAttribute("rotation", {x:0, y:89.7, z:0});
+          elem.setAttribute("position", {x:9, y:0, z:possition});
+          document.getElementById("steve").appendChild(elem);
+
+          frame.setAttribute("src", "img/frame.png");
+          frame.setAttribute("height", "1");
+          frame.setAttribute("width", "1");
+          frame.setAttribute("rotation", {x:9, y:89, z:-2});
+          frame.setAttribute("position", {x:9, y:0, z:possition});
+          document.getElementById("steve").appendChild(frame);
+
+          var link = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+ page +"&format=json&callback=?";
+          // revids=478198
+          $.ajax({
+            type: "GET",
+            url: link,
+            contentType: "application/json; charset=utf-8",
+            async: false,
+            dataType: "json",
+            success:function(re){
+              let result =re.query.pages;
+              console.log(re.query.pages);
+              for(let propName in result) {
+                if(result.hasOwnProperty(propName)) {
+                  let propValue = result[propName];
+                  console.log(propValue);
+                  var ti =propValue.title;
+                  console.log(ti)
+                  // do something with each element here
+                }
+              }
+              let link = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+ page +"&format=json&callback=?";
+              // revids=478198
+              $.ajax({
+                type: "GET",
+                url: link,
+                contentType: "application/json; charset=utf-8",
+                async: false,
+                dataType: "json",
+                success:function(re){
+                  let result =re.query.pages
+                  console.log(re.query.pages)
+                  for(let propName in result) {
+                    if(result.hasOwnProperty(propName)) {
+                      let propValue = result[propName];
+                      console.log(propValue)
+                      let ti =propValue.title
+                      console.log(ti)
+
+                      // do something with each element here
+                    }
+                  }
+                  let link = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ ti +"&format=json&callback=?";
+                  // revids=478198
+                  $.ajax({
+                    type: "GET",
+                    url: link,
+                    contentType: "application/json; charset=utf-8",
+                    async: false,
+                    dataType: "json",
+                    success:function(res){
+                      // var resu =re
+                      console.log(res)
+                      console.log(res[2][0])
+                      let ds = (res[2][0])
+                      let text = document.createElement("a-text")
+                      text.setAttribute("value", ti + ": "+ ds)
+                      text.setAttribute("rotation", {x:-2, y:90, z:-90});
+                      text.setAttribute("position", {x:9, y:0, z:possition});
+                      text.setAttribute("scale",".1 1 1");
+                      text.setAttribute("width", "10");
+                      text.setAttribute("height", "2");
+                      text.setAttribute("wrapCount","10");
+                      text.setAttribute("geometry", "primitive:plane");
+                      text.setAttribute("color", "black");
+                      document.getElementById("steve").appendChild(text);
+
+                    },
+                    error:function(u){
+                      console.log("u");
+                      alert("sorry, there are no results for your search")
+                    }
+                  })
+                },
+                error:function(u){
+                  console.log("u");
+                  alert("sorry, there are no results for your search")
+                }
+              })
+            },
+            error:function(u){
+              console.log("u");
+              alert("sorry, there are no results for your search")
+            }
+          })
+        }
+      })
+
+    },
+    error:function(e){
+      console.log("e");
+      alert("sorry, there are no results for your search")
+    }
+  });
+}
+  </script>
   </body>
 </html>
